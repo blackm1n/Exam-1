@@ -1,6 +1,4 @@
-﻿string[] array = {"hello", "hi", "bye", "marshmallow"};
-
-int Count3orLess(string[] array)
+﻿int Count3orLess(string[] array)
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++)
@@ -26,7 +24,12 @@ string[] Arrayof3orLess(string[] array)
     return result;
 }
 
-string[] output = Arrayof3orLess(array);
+Console.WriteLine("Введите слова через запятую.");
+Console.WriteLine("Пример: hi, hello, bye");
+string userinput = Console.ReadLine() ?? "0";
+
+string[] input = userinput.Split(", ").ToArray();
+string[] output = Arrayof3orLess(input);
 
 for (int i = 0; i < output.Length; i++)
 {
